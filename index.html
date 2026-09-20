@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Piyush Bhatt | Corporate Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;800&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { background: #f8f9fa; font-family: 'Inter', sans-serif; padding: 32px 20px; color: #111; }
+    .container { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 320px 1fr; gap: 24px; align-items: start; }
+    
+    /* LEFT SIDEBAR */
+    .sidebar { background: #fff; border-radius: 24px; padding: 32px 24px; box-shadow: 0 4px 20px rgba(0,0,0,0.04); border: 1px solid #f3f4f6; text-align: center; position: sticky; top: 20px; }
+    .avatar { width: 120px; height: 120px; border-radius: 50%; background: linear-gradient(135deg, #a855f7, #4f46e5); margin: 0 auto 20px; display: flex; align-items: center; justify-content: center; color: #fff; font-size: 44px; font-weight: 800; }
+    h1 { font-size: 22px; font-weight: 800; margin: 0 0 6px; }
+    .role { font-size: 13px; color: #4f46e5; font-weight: 500; margin: 0 0 4px; }
+    .location { font-size: 12px; color: #9ca3af; margin-bottom: 20px; }
+    
+    .links { display: flex; justify-content: center; gap: 10px; flex-wrap: wrap; margin-bottom: 20px; }
+    .pill { font-size: 11px; padding: 4px 10px; border-radius: 20px; background: #f3f4f6; color: #374151; text-decoration: none; font-weight: 500; }
+    
+    .side-section { border-top: 1px solid #f3f4f6; padding-top: 20px; text-align: left; margin-bottom: 20px; }
+    .side-label { font-size: 11px; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 10px; }
+    .summary { font-size: 13px; color: #4b5563; line-height: 1.75; }
+    
+    .skill-cat { font-size: 11px; font-weight: 700; color: #9ca3af; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 7px; }
+    .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
+    .tag { font-size: 11px; color: #374151; padding: 3px 9px; background: #f3f4f6; border-radius: 7px; font-weight: 500; }
+    
+    .available { padding: 10px 14px; background: #f0fdf4; border-radius: 12px; display: flex; align-items: center; justify-content: center; gap: 8px; font-size: 12px; font-weight: 500; color: #166534; }
+    .available .dot { width: 7px; height: 7px; border-radius: 50%; background: #22c55e; }
+    
+    /* RIGHT MAIN */
+    .main { display: flex; flex-direction: column; gap: 20px; }
+    .card { background: #fff; border-radius: 24px; padding: 28px; box-shadow: 0 4px 20px rgba(0,0,0,0.03); border: 1px solid #f3f4f6; }
+    .card-title { font-size: 17px; font-weight: 800; margin: 0 0 20px; display: flex; align-items: center; gap: 8px; }
+    
+    .exp-item { margin-bottom: 24px; padding-bottom: 24px; border-bottom: 1px solid #f3f4f6; }
+    .exp-item:last-child { margin-bottom: 0; padding-bottom: 0; border-bottom: none; }
+    .exp-head { display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 10px; margin-bottom: 12px; }
+    .exp-role { font-size: 16px; font-weight: 800; margin: 0 0 5px; }
+    .exp-company { font-size: 13px; color: #4f46e5; font-weight: 500; }
+    .exp-company span { color: #9ca3af; font-weight: 400; }
+    .exp-date { font-size: 12px; color: #6b7280; background: #f3f4f6; padding: 4px 12px; border-radius: 20px; white-space: nowrap; }
+    .bullets { margin: 0; padding: 0 0 0 18px; }
+    .bullets li { font-size: 14px; color: #4b5563; line-height: 1.7; margin-bottom: 7px; }
+    
+    .proj-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 16px; }
+    .proj-card { padding: 20px; border: 1px solid #f3f4f6; border-radius: 16px; }
+    .proj-head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 9px; }
+    .proj-title { font-size: 15px; font-weight: 800; margin: 0; }
+    .proj-links a { font-size: 12px; color: #4f46e5; text-decoration: none; font-weight: 600; margin-left: 8px; }
+    .proj-desc { font-size: 13px; color: #6b7280; line-height: 1.65; margin: 0 0 12px; }
+    .proj-tags { display: flex; flex-wrap: wrap; gap: 6px; }
+    .proj-tag { font-size: 11px; padding: 3px 10px; border-radius: 20px; background: #e0e7ff; color: #4f46e5; font-weight: 600; }
+    
+    @media (max-width: 900px) {
+      .container { grid-template-columns: 1fr; }
+      .sidebar { position: static; }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <div class="sidebar">
+      <div class="avatar">P</div>
+      <h1>Piyush Bhatt</h1>
+      <div class="role">Software Development Engineering Intern</div>
+      <div class="location">📍 Panipat, Haryana</div>
+
+      <div class="links">
+        <a href="mailto:bhattpeyush303@gmail.com" class="pill">✉ Email</a>
+        <span class="pill">📞 +91 9306955627</span>
+        <a href="https://github.com/thepiyush-303" target="_blank" class="pill">GitHub ↗</a>
+        <a href="linkedin.com/in/piyush-bhatt-713866288/" target="_blank" class="pill">LinkedIn ↗</a>
+        
+      </div>
+
+      <div class="side-section">
+        <div class="side-label">About</div>
+        <p class="summary">Piyush Bhatt is a proactive Software Development Engineering Intern with experience at Rocket.Chat (Google Summer of Code), demonstrating expertise in AI-powered application development for large-scale cloud environments. He excels in Agile methodologies, implements robust security protocols, and contributes significantly to open-source projects. Piyush is also a highly skilled competitive programmer and a leader in cybersecurity initiatives, showcasing strong problem-solving and communication abilities.</p>
+      </div>
+
+      <div class="side-section">
+        <div class="side-label">Skills</div>
+        <div class="skill-cat">Languages</div>
+        <div class="tags">
+          <span class="tag">C++</span><span class="tag">Typescript</span><span class="tag">Golang</span><span class="tag">HTML/CSS</span><span class="tag">JavaScript</span><span class="tag">Python</span>
+        </div>
+        <div class="skill-cat">Technologies/Frameworks/Libraries</div>
+        <div class="tags">
+          <span class="tag">ReactJS</span><span class="tag">NextJs</span><span class="tag">ExpressJS</span><span class="tag">Numpy</span><span class="tag">Pandas</span><span class="tag">Matlab</span><span class="tag">Jupyter</span><span class="tag">Google Colab</span>
+        </div>
+        <div class="skill-cat">Core Concepts &amp; Practices</div>
+        <div class="tags">
+          <span class="tag">DBMS</span><span class="tag">Networking</span><span class="tag">Operating system</span><span class="tag">Object-Oriented Design OOPs</span><span class="tag">Data Structures &amp; Algorithms</span><span class="tag">RESTful APIs </span>
+        </div>
+        <div class="skill-cat">Platforms</div>
+        <div class="tags">
+          <span class="tag">Linux (Ubuntu)</span><span class="tag">Windows</span><span class="tag">Docker</span><span class="tag">GitHub</span><span class="tag">Mongodb Atlas</span><span class="tag">Postgres</span><span class="tag">SQL</span>
+        </div>
+      </div>
+
+
+      <div class="available">
+        <span class="dot"></span> Available for new opportunities
+      </div>
+    </div>
+
+    <div class="main">
+      <section class="card">
+        <h2 class="card-title">💼 Experience</h2>
+        <div class="exp-item">
+          <div class="exp-head">
+            <div>
+              <h3 class="exp-role">Software Development Engineering Intern</h3>
+              <div class="exp-company">Rocket.Chat <span>· Remote</span></div>
+            </div>
+            <div class="exp-date">2025-05 – 2025-08</div>
+          </div>
+          <ul class="bullets">
+            <li>Engineered and deployed a scalable AI-powered application on a platform serving over 12 million users, demonstrating an ability to build for a large-scale cloud environment.</li><li>Integrated LLMs for intelligent data processing and a seamless, secure user experience by handling user information (prompts, images, location) via HTTPS, demonstrating an understanding of fundamental security protocols like TLS.</li><li>Excelled in a remote Agile development team, utilizing Git for version control and conducting rigorous unit-testing and debugging to maintain a 100% code coverage standard, while establishing excellent relationships with international mentors.</li><li>Wrote and optimized 500+ lines of high-quality prompts for large language models (LLMs) to enhance accuracy, contextual understanding, and task performance.</li><li>Authored comprehensive technical documentation, showcasing excellent written communication skills and ensuring project sustainability.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">🎓 Education</h2>
+        <div class="exp-item" style="border-bottom: 1px solid #f3f4f6; margin-bottom: 20px; padding-bottom: 20px;">
+          <div class="exp-head" style="margin: 0;">
+            <div>
+              <h3 class="exp-role">Bachelor of Technology in Electronics and Communication</h3>
+              <div class="exp-company">Indian Institute of Information Technology, Kota</div>
+              
+            </div>
+            <div class="exp-date">2023-08 – 2027-05</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2 class="card-title">🚀 Projects</h2>
+        <div class="proj-grid">
+          <div class="proj-card">
+            <div class="proj-head">
+              <h3 class="proj-title">Trip Helper App</h3>
+              <div class="proj-links">
+                
+                
+              </div>
+            </div>
+            <p class="proj-desc">Spearheaded the design and creation of the TripHelper App, an AI-driven travel assistant, focusing on intuitive user interface design to enhance trip planning for over 12 million global users. Constructed and deployed the application’s entire backend infrastructure using TypeScript and Node.js, leveraging object-oriented programming to significantly enhance trip-planning functionalities within Rocket.Chat.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Typescript</span><span class="proj-tag">Nodejs</span><span class="proj-tag">Apps-Engine</span><span class="proj-tag">REST API</span><span class="proj-tag">OOPs</span>
+            </div>
+          </div>
+          <div class="proj-card">
+            <div class="proj-head">
+              <h3 class="proj-title">RAG-based Document QA System</h3>
+              <div class="proj-links">
+                
+                
+              </div>
+            </div>
+            <p class="proj-desc">Built a Retrieval-Augmented Generation (RAG) system to answer user queries from PDF documents using LLMs. Implemented a document pipeline with PDF parsing, text chunking (LangChain), and embedding generation for semantic search.</p>
+            <div class="proj-tags">
+              <span class="proj-tag">Python</span><span class="proj-tag">LangChain</span><span class="proj-tag">Qdrant</span><span class="proj-tag">FastAPI</span>
+            </div>
+          </div>
+          <div class="proj-card">
+            <div class="proj-head">
+              <h3 class="proj-title"></h3>
+              <div class="proj-links">
+                
+                
+              </div>
+            </div>
+            <p class="proj-desc"></p>
+            <div class="proj-tags">
+              
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <section class="card">
+        <h2 class="card-title">🏆 Certifications</h2>
+        <ul class="bullets">
+          <li>Google Summer of Code 2025 @ Rocket.Chat</li><li>CCNA Cisco</li><li>Python Udemy</li>
+        </ul>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
